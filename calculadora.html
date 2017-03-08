@@ -19,6 +19,11 @@
 				<input type="text"  maxlength="30" readonly="readonly" name="tela" id="tela"/>
 				</td>
 			</tr>
+			
+			<tr>
+				<td><input type="button" name="apagarUlt" id="apagarUlt" value="<-" onclick="limparUltimoSinal()"/></td>
+			</tr>
+			
 			<tr>
 				<td><input type="button" name="num7" id="num7" value="7" onclick="passarValorTela(this.value)"/></td>
 				<td><input type="button" name="num8" id="num8" value="8" onclick="passarValorTela(this.value)"/></td>
@@ -67,6 +72,12 @@
 				
 				function passarValorTela(str){
 					document.formulario.tela.value += str;
+				}
+				
+				function limparUltimoSinal(){
+					var valorArmazenado = document.formulario.tela.value;
+					var aux = 	valorArmazenado.substring(0, valorArmazenado.length - 1)
+					document.formulario.tela.value = aux;
 				}
 				
 			</script>
