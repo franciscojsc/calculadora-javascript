@@ -1,0 +1,72 @@
+	<!--Desenvolvido por Francisco Chaves -->
+
+<html>
+
+	<head>
+			<title>Calculadora</title>
+			<link href ="css/style.css" type="text/css" rel ="stylesheet" />
+	</head>
+	
+	<body>
+	
+	<div>
+		<h1>Calculadora JavaScript</h1>
+		<form name="formulario"> 
+		<table >
+			
+			<tr>
+				<td colspan="4">
+				<input type="text"  maxlength="30" readonly="readonly" name="tela" id="tela"/>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="button" name="num7" id="num7" value="7" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="num8" id="num8" value="8" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="num9" id="num9" value="9" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="operD" id="operD" value="/" onclick="passarValorTela(this.value)"/></td>
+			</tr>
+			
+			<tr>
+				<td><input type="button" name="num4" id="num4" value="4" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="num5" id="num5" value="5" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="num6" id="num6" value="6" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="operV" id="operV" value="*" onclick="passarValorTela(this.value)"/></td>
+			</tr>
+			
+			<tr>
+				<td><input type="button" name="num1" id="num1" value="1" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="num2" id="num2" value="2" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="num3" id="num3" value="3" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="operM" id="operM" value="-" onclick="passarValorTela(this.value)"/></td>
+			</tr>
+			
+			<tr>
+				<td><input type="button" name="num0" id="num0" value="0" onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="ponto" id="ponto" value="." onclick="passarValorTela(this.value)"/></td>
+				<td><input type="button" name="calcular" id="calcular" value="=" onclick="calcularValores()";/></td>
+				<td><input type="button" name="operSo" id="operSo" value="+" onclick="passarValorTela(this.value)"/></td>
+				
+			</tr>
+		
+		</table>
+	 </form>
+	</div>
+	
+	</body>
+	
+</html>
+
+
+			<script type="text/javascript">
+				/*calculadora */
+				function calcularValores(valor){
+					var calcularValor;
+					calcularValor = eval(document.formulario.tela.value);
+					document.formulario.tela.value = calcularValor;
+				}
+				
+				function passarValorTela(str){
+					document.formulario.tela.value += str;
+				}
+				
+			</script>
