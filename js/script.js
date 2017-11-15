@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     var tela = document.getElementById("tela");
 
@@ -103,4 +103,4 @@ window.onload = function () {
         }
     }
 
-}
+});
